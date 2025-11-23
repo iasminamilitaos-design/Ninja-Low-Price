@@ -60,7 +60,7 @@ A partir do nome de qualquer produto informado pelo usuário, o agente:
 | Mercado Livre | Echo Show 8 | R$ 899,00 | Tela de 8 polegadas | [Ver no Mercado Livre](https://produto.mercadolivre.com.br/MLB-4225021219-amazon-echo-show-8-com-assistente-virtual-alexa-tela-_JM?utm_source=chatgpt.com) |
 | Americanas | Echo Show 8 | R$ 849,00 | Tela de 8 polegadas | [Ver na Americanas](https://www.americanas.com.br/smart-speaker-amazon-alexa-echo-show-8-tela-8-2-geracao-r1761n953488u299/p?utm_source=chatgpt.com) |
 
-**Análise:** Amazon Brasil oferece o **melhor preço** com o modelo mais compacto (Echo Show 5) por **R$ 469,00**.
+**Análise:** Amazon Brasil oferece o **melhor preço** com o modelo mais compacto (Echo Show 5) por **R$ 469,00 + frete grátis**.
 
 ---
 
