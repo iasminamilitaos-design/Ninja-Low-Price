@@ -1,0 +1,136 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Comparador de Preços Google",
+    "version": "1.0.0",
+    "description": "Busca preços de produtos em lojas brasileiras"
+  },
+  "servers": [
+    {
+      "url": "https://www.googleapis.com"
+    }
+  ],
+  "paths": {
+    "/customsearch/v1": {
+      "get": {
+        "operationId": "buscarPrecos",
+        "summary": "Busca preços de produtos na internet",
+        "description": "Busca informações e preços de produtos em lojas online brasileiras como Amazon, Mercado Livre, Magazine Luiza, etc.",
+        "parameters": [
+          {
+            "name": "key",
+            "in": "query",
+            "required": true,
+            "description": "Chave da API Google",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "AIzaSyAcoQc10ZlCNYc-p0tH5d8gum1HULIaCVI"
+              ]
+            }
+          },
+          {
+            "name": "cx",
+            "in": "query",
+            "required": true,
+            "description": "ID do mecanismo de busca",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "f1a79432ac7054753"
+              ]
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "description": "Nome do produto a ser buscado. Adicione palavras como 'preço', 'comprar' ou 'loja' para melhores resultados.",
+            "schema": {
+              "type": "string"
+            },
+            "example": "echo show preço comprar"
+          },
+          {
+            "name": "num",
+            "in": "query",
+            "required": false,
+            "description": "Quantidade de resultados (máximo 10)",
+            "schema": {
+              "type": "integer",
+              "default": 10
+            }
+          },
+          {
+            "name": "gl",
+            "in": "query",
+            "required": false,
+            "description": "País da busca",
+            "schema": {
+              "type": "string",
+              "default": "br"
+            }
+          },
+          {
+            "name": "hl",
+            "in": "query",
+            "required": false,
+            "description": "Idioma dos resultados",
+            "schema": {
+              "type": "string",
+              "default": "pt"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Resultados encontrados com sucesso",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "items": {
+                      "type": "array",
+                      "description": "Lista de resultados encontrados",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "title": {
+                            "type": "string",
+                            "description": "Título do resultado/produto"
+                          },
+                          "link": {
+                            "type": "string",
+                            "description": "URL da página do produto"
+                          },
+                          "snippet": {
+                            "type": "string",
+                            "description": "Trecho com informações do produto, geralmente contém o preço"
+                          },
+                          "displayLink": {
+                            "type": "string",
+                            "description": "Nome do site/loja (ex: amazon.com.br)"
+                          }
+                        }
+                      }
+                    },
+                    "searchInformation": {
+                      "type": "object",
+                      "properties": {
+                        "totalResults": {
+                          "type": "string",
+                          "description": "Total de resultados encontrados"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
