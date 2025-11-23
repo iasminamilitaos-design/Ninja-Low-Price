@@ -63,8 +63,7 @@ A partir do nome de qualquer produto informado pelo usuário, o agente:
 **Análise:** Amazon Brasil oferece o **melhor preço** com o modelo mais compacto (Echo Show 5) por **R$ 469,00 + frete grátis**.
 
 ---
-https://www.youtube.com/watch?v=https://youtu.be/JsIS-LyaImI
-
+https://youtu.be/JsIS-LyaImI
 
 
 
